@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create an Account</title>
+  <link rel="stylesheet" type="text/css" href="CreateAccount.css">
+</head>
+
+<body class="form" >
+    <h2 class="form-user"><b>Create Your Account</b></h2>
+    <FORM class="form-isi" action="loginbaru.html">
+      <P>
+        First Name
+        <input class="text" type="text"/>
+        <br>
+
+        Last Name
+        <input class="text" type="text"/>
+        <br>
+
+        E-mail Address
+        <input class="text" type="E-mail"/>
+        <br>
+
+        Password
+        <input type="Password" id="password1" onkeyup="validasi()" />
+        <br>
+
+        Confirm your Password
+        <input type="Password" id="Password2" onkeyup="validasi()" />
+        <br>
+      </P>
+        <input class="submit" type="submit" name="submit" value="Create an Account" />
+
+    </FORM>
+      <div class="container" style="background-color:#f1f1f1">
+          <button class="cancelbtn" type="button" onclick="konfirmasi()">Cancel</button>
+      </div>
+      <script type="text/javascript">
+        function konfirmasi(){
+          var konfirmasi=confirm('apakah anda yakin?');
+          var text= "";
+
+          if (konfirmasi== true){
+            text="silahkan lanjutkan";
+          }else{
+            text="anda akan tetap di halaman ini";
+          }
+
+          document.getElementByid('hasil').innerHTML()=text;
+        }
+      </script>
+</body>
+
+</html>
